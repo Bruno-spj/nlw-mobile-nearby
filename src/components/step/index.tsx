@@ -4,15 +4,15 @@ import { s } from "./styles";
 import { IconProps } from "@tabler/icons-react-native";
 
 type props = {
-  title: string,
-  description: string,
-  icon: React.ComponentType<IconProps>
-}
+  title: string;
+  description: string;
+  icon: React.ComponentType<IconProps>;
+};
 
 export function Step({ title, description, icon: Icon }: props) {
   return (
     <View style={s.container}>
-      Icon && <Icon size={32} color={colors.red.base}/>
+      {Icon && <Icon size={32} color={colors.red.base} />}
       <View style={s.details}>
         <Text style={s.title}>{title}</Text>
         <Text style={s.description}>{description}</Text>
